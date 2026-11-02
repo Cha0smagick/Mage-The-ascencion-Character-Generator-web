@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mage: The Ascension — Character Sheet Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Uncial+Antiqua&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="data.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="sheet-header">
+  <div class="hermetic-seal"></div>
+  <h1>Mage: The Ascension</h1>
+  <div class="subtitle">Character Sheet Generator <span class="es">• Generador de Hojas de Personaje</span></div>
+</header>
+
+<main class="generator">
+  <aside class="controls">
+    <h2>Creation</h2>
+    <div class="control-group">
+      <label><strong>Affiliation / Facción</strong></label>
+      <select id="affiliation"></select>
+    </div>
+    <div class="control-group">
+      <label><strong>Nature / Naturaleza</strong></label>
+      <select id="nature"></select>
+    </div>
+    <div class="control-group">
+      <label><strong>Demeanor / Conducta</strong></label>
+      <select id="demeanor"></select>
+    </div>
+    <div class="control-group">
+      <label><strong>Paradigm / Paradigma</strong></label>
+      <select id="paradigm"></select>
+    </div>
+    <div class="control-group">
+      <label><strong>Morality / Moralidad</strong></label>
+      <select id="morality"></select>
+    </div>
+    <button id="btn-generate" class="btn primary">Generate Character / Generar Personaje</button>
+    <button id="btn-random" class="btn outline">Random / Aleatorio</button>
+    <div class="divider">Locks / Bloqueos</div>
+    <label class="lock"><input type="checkbox" id="lock-concept"> Concept & Name / Concepto y Nombre</label>
+    <label class="lock"><input type="checkbox" id="lock-appearance"> Appearance / Apariencia</label>
+    <label class="lock"><input type="checkbox" id="lock-attributes"> Attributes / Atributos</label>
+    <label class="lock"><input type="checkbox" id="lock-abilities"> Abilities / Habilidades</label>
+    <label class="lock"><input type="checkbox" id="lock-spheres"> Spheres / Esferas</label>
+    <label class="lock"><input type="checkbox" id="lock-backgrounds"> Backgrounds / Trasfondos</label>
+    <div class="export">
+      <button id="btn-pdf" class="btn pdf">Export PDF / Exportar PDF</button>
+      <button id="btn-print" class="btn print">Print Sheet / Imprimir Hoja</button>
+    </div>
+  </aside>
+
+  <section class="sheet" id="sheet">
+    <div class="sheet-page" id="page-1">
+      <!-- Page 1: attributes, abilities, spheres, trackers -->
+    </div>
+    <div class="sheet-page" id="page-2" style="display:none">
+      <!-- Page 2: story, merits/flaws, equipment -->
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
